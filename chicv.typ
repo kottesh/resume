@@ -14,7 +14,7 @@
 }
 
 #let githublink(userRepo) = {
-  link("https://github.com/" + userRepo)[#text(rgb("#0000FF"))[#fa[#arrow-up-right]]~#userRepo]
+  link("https://github.com/" + userRepo)[#text(rgb("#DC143C"))[#fa[#github]]~#userRepo]
 }
 
 #let latex = {
@@ -50,10 +50,11 @@
 
   show heading.where(
     level: 1
-  ): set text(
+  ): it => align(left, text(
     size: 22pt,
     weight: "light",
-  )
+    it
+  ))
 
   let the-font = (
     "Palatino Linotype",
@@ -74,9 +75,10 @@
     font: the-font
   )
 
-  show link: it => underline(offset: 2pt, it)
+  //show link: it => underline(offset: 2pt, it)
+
   set page(
-   margin: (x: 0.5cm, y: 1.5cm)
+    margin: (x: 0.6cm, y: 1cm)
   )
   set par(justify: true)
 

@@ -772,6 +772,7 @@
   ("alt.slash", "\u{f539}"),
 )
 #let microscope = symbol("\u{f610}")
+#let location = symbol("\u{f3c5}")
 #let minus = symbol(
   "\u{f068}",
   ("circle", "\u{f056}"),
