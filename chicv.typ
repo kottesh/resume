@@ -1,3 +1,5 @@
+#import "@preview/use-tabler-icons:0.4.0"
+
 #let chiline() = {
   v(-3pt);
   line(length: 100%, stroke: gray);

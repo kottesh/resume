@@ -8,18 +8,18 @@
   let edu = {
     [== Education]
     let gpa = 9.27
-    let psu-date = [#translate-date(10, 2022) -- #current]
+    let cit-date = [#translate-date(10, 2022) -- #current]
     cventry(
-      tl: [ *Coimbatore Institute of Technology* ],
-      tr: psu-date,
+      tl: [ *Coimbatore Institute of Technology*, Coimbatore, India ],
+      tr: cit-date,
       bl: [ _Master of Science in Software Systems_ ],
       br: [CGPA: *#gpa/10* ( upto 4th sem )],
     )[]
 
-    let cmu-date = [#translate-date(6, 2020) -- #translate-date(5, 2022)]
+    let ssv-date = [#translate-date(6, 2020) -- #translate-date(5, 2022)]
     cventry(
-      tl: [*Sri Sowdeswari Vidyalaya Matriculation Higher Secondary School*],
-      tr: cmu-date,
+      tl: [*Sri Sowdeswari Vidyalaya Matriculation Higher Secondary School*, Coimbatore, India ],
+      tr: ssv-date,
       bl: [_High School_],
       br: [_10th grade:_ *87%*, _12th grade:_ *92.67%*],
     )[]
@@ -32,7 +32,7 @@
     )[
       - A fully featured Music Streaming App supports smooth audio streaming with features to browse, search, and play music.
       - Implemented a fully compatible player with the queuing functionality.
-      - Created a custom API backend #link_t(" https://github.com/kottesh/riff-api")~for serving the content to the site.
+      - Created a custom API backend #link_t("https://github.com/kottesh/riff-api")~for serving the content to the site.
       - Utilizes _Firebase_ bucket storage for audio files and _Cloudinary_ for image assets.
     ]
   }
@@ -97,18 +97,18 @@
   }
 
   let achievements = [
-    - Won 1st place with a cash prize of *12K INR* in the *_Triathlon_* event at *AXIOS 2K24* hosted by PSG Tech, CBE.#link_t("https://drive.google.com/file/d/1uGfbKHbX5grvFcklMBHncklmQ33EcxUL/view?usp=sharing")
-    - Secured 2nd place in the *_Code Fusion_* competition at *KRISHNECS 2K24* hosted by SKCET, CBE.#link_t("https://drive.google.com/file/d/1uGPxS82819MtigpvXuv-XWNVGkRGHOLl/view?usp=drive_link")
+    - Won 1st place with a cash prize of *12K INR* in the *_Triathlon_* event at *AXIOS 2K24* hosted by PSG Tech, CBE. #link_t("https://drive.google.com/file/d/1uGfbKHbX5grvFcklMBHncklmQ33EcxUL/view?usp=sharing")
+    - Secured 2nd place in the *_Code Fusion_* competition at *KRISHNECS 2K24* hosted by SKCET, CBE. #link_t("https://drive.google.com/file/d/1uGPxS82819MtigpvXuv-XWNVGkRGHOLl/view?usp=drive_link")
     - Achieved 1st place in the *_Bid Battle_*, a technical quiz based on bidding, winning a cash prize of *2K INR* at
       *Melinia* 2024 hosted by CIT, CBE. #link_t("https://drive.google.com/file/d/1uIvnh5eMedk_u6gev-kx5llTTkbtp7kI/view?usp=drive_link")
-    - Earned the Cybersecurity Fundamentals certification from IBM-SkillsBuild.#link_t(" https://www.credly.com/badges/6feb1214-f811-45e8-b138-d082b7e24f6b/public_url")
+    - Earned the Cybersecurity Fundamentals certification from IBM-SkillsBuild. #link_t("https://www.credly.com/badges/6feb1214-f811-45e8-b138-d082b7e24f6b/public_url")
   ]
 
   let relevantCourseWork = [
     - Data Structures and Algorithms
     - Object Oriented Programming
     - Operating Systems
-    - DBMS 
+    - DBMS
   ]
 
   // Start of the document
@@ -122,7 +122,7 @@
 
   align(
     center,
-  )[#iconlink("https://kottesh.xyz", text: "kottesh.xyz") $dot.c$ #iconlink("tel:919442928955", text: "+91-94429 28955", icon: mobile) $dot.c$ #iconlink("mailto:shreekottes@gmail.com", text: "shreekottes@gmail.com", icon: mail) $dot.c$ #iconlink("https://github.com/kottesh", text: "kottesh", icon: github) $dot.c$ #iconlink("https://linkedin.com/in/kottesh/", text: "kottesh", icon: linkedin)]
+  )[#iconlink("https://kottesh.xyz", text: "kottesh.xyz") $dot.c$ #iconlink("tel:919442928955", text: "+91-94429 28955", icon: mobile) $dot.c$ #iconlink("mailto:shreekottes@gmail.com", text: "shreekottes@gmail.com", icon: mail) $dot.c$ #iconlink("https://github.com/kottesh", text: "kottesh", icon: github) $dot.c$ #iconlink("https://linkedin.com/in/kottesh/", text: "kottesh", icon: linkedin) $dot.c$ #iconlink("https://leetcode.com/criptr", text: "LeetCode")]
 
   [== Summary]
   par(
@@ -154,3 +154,4 @@
 
 #show: chicv
 #resume
+
