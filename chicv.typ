@@ -1,9 +1,6 @@
-#import "@preview/use-tabler-icons:0.4.0"
-
 #let chiline() = {
-  v(-3pt);
-  line(length: 100%, stroke: gray);
-  v(-10pt)
+  v(-11pt)
+  line(length: 100%, stroke: (0.5pt));
 }
 
 #import "fontawesome.typ": *;
@@ -38,24 +35,21 @@
 
 #let link_t(link_val) = {
   link(link_val)[
-    #box(inset: 1.5pt, stroke: + 0.5pt + rgb("#00FFFF"))[#fa(arrow-up-right)] 
+    #box(width: 0.8em, outset: 2pt, stroke: + 0.5pt + rgb("#00FFFF"))[#arrow-up-right]
   ]
 }
 
 #let chicv(body) = {
+  let the-font = ("New Computer Modern")
+
   set par(justify: true)
-   
-  show heading.where(level: 1): it => align(center, text(size: 22pt, weight: "light", it))
-   
-  let the-font = ("Palatino Linotype",)
-  show heading.where(level: 2): it => text(size: 14pt, font: the-font, weight: "bold", block(chiline() + it))
-  set list(indent: 0pt)
-  set text(size: 10pt, font: the-font)
-   
-  //show link: it => underline(offset: 2pt, it)
-   
-  set page(margin: (x: 0.6cm, y: 0.8cm))
+  show heading.where(level: 1): it => align(center, text(size: 20pt, font: the-font, weight: "medium", it))
+  show heading.where(level: 2): it => text(size: 12pt, font: the-font, weight: "medium", block(smallcaps(it) + chiline()))
+  set list(indent: 3pt)
+  set text(size: 9.5pt, font: the-font)
+  set page(margin: (x: 1cm, y: 0.6cm))
   set par(justify: true)
-   
+
   body
 }
+ 
