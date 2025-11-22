@@ -9,7 +9,7 @@
     uri,
     label: [],
     icon: link-icon,
-    size: none,
+    size: 18pt,
 ) = {
     if label == [] { label = uri }
 
