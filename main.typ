@@ -169,7 +169,7 @@
     ]
 
     // Resume
-    [= #smallcaps[Shree Kottes J]]
+    [= Shree Kottes J]
 
     align(
         center,

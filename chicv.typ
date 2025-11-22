@@ -18,9 +18,9 @@
     link(uri)[
         #box(
             stroke: 0.4pt + rgb("#00FFFF"),
-            outset: (y: 2pt),
+            outset: (y: 2.5pt),
             inset: (x: 2pt),
-            content
+            content,
         )
     ]
 }
@@ -53,14 +53,14 @@
     let the-font = "New Computer Modern"
 
     set par(justify: true)
-    show heading.where(level: 1): it => align(center, text(size: 20pt, font: the-font, weight: "medium", it))
+    show heading.where(level: 1): it => align(center, text(size: 20pt, font: the-font, weight: "medium", smallcaps(it)))
     show heading.where(level: 2): it => text(size: 12pt, font: the-font, weight: "medium", block(
         smallcaps(it) + chiline(),
     ))
     set list(indent: 3pt)
     set text(size: 9.5pt, font: the-font)
     set page(margin: (x: 1cm, y: 0.6cm))
-    set par(justify: true)
+    set par(justify: true, spacing: 1.1em)
 
     body
 }
