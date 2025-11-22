@@ -18,8 +18,10 @@
     link(uri)[
         #box(
             stroke: 0.4pt + rgb("#00FFFF"),
-            outset: 3pt,
-        )[ #content ]
+            outset: (y: 2pt),
+            inset: (x: 2pt),
+            content
+        )
     ]
 }
 

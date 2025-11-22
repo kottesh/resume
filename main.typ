@@ -155,9 +155,9 @@
 
     // Achievements
     let achievements = [
-        - Won 1st place with a cash prize of *12K INR* in the *_Triathlon_* event at *AXIOS 2K24* hosted by PSG Tech, CBE.~#iconlink("https://drive.google.com/file/d/1uGfbKHbX5grvFcklMBHncklmQ33EcxUL/view?usp=sharing", label: none, icon: arrow-up-right)
-        - Secured 2nd place in the *_Code Fusion_* competition at *KRISHNECS 2K24* hosted by SKCET, CBE.~#iconlink("https://drive.google.com/file/d/1uGPxS82819MtigpvXuv-XWNVGkRGHOLl/view?usp=drive_link", label: none, icon: arrow-up-right)
-        - Achieved 1st place in the *_Bid Battle_*, a technical quiz based on bidding, winning a cash prize of *2K INR* at *Melinia* 2024 hosted by CIT, CBE.~#iconlink("https://drive.google.com/file/d/1uIvnh5eMedk_u6gev-kx5llTTkbtp7kI/view?usp=drive_link", label: none, icon: arrow-up-right)
+        - Won 1st place with a cash prize of *12K INR* in the *_Triathlon_* event at *AXIOS 2K24* hosted by PSG Tech, CBE.#iconlink("https://drive.google.com/file/d/1uGfbKHbX5grvFcklMBHncklmQ33EcxUL/view?usp=sharing", label: none, icon: arrow-up-right)
+        - Secured 2nd place in the *_Code Fusion_* competition at *KRISHNECS 2K24* hosted by SKCET, CBE.#iconlink("https://drive.google.com/file/d/1uGPxS82819MtigpvXuv-XWNVGkRGHOLl/view?usp=drive_link", label: none, icon: arrow-up-right)
+        - Achieved 1st place in the *_Bid Battle_*, a technical quiz based on bidding, winning a cash prize of *2K INR* at *Melinia* 2024 hosted by CIT, CBE.#iconlink("https://drive.google.com/file/d/1uIvnh5eMedk_u6gev-kx5llTTkbtp7kI/view?usp=drive_link", label: none, icon: arrow-up-right)
     ]
 
     // Coursework
