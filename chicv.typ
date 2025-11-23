@@ -9,15 +9,16 @@
     uri,
     label: [],
     icon: link-icon,
-    size: 18pt,
+    size: none,
 ) = {
     if label == [] { label = uri }
 
+    let icon = [ #if size != none [#text(size, icon)] else [#icon]]
+    let label = [ #if size != none [#text(size, label)] else [#label]]
     let content = [ #fa[#icon] #if label != none [#label] ]
-    if size != none { content = text(size, content) }
     link(uri)[
         #box(
-            stroke: 0.4pt + rgb("#00FFFF"),
+            stroke: 0.5pt + rgb("#00FFFF"),
             outset: (y: 2.5pt),
             inset: (x: 2pt),
             content,

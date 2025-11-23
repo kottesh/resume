@@ -56,13 +56,13 @@
     let riff = {
         cventry(
             tl: [
-                *RIFF*#iconlink("https://riff.kottesh.xyz", label: none, icon: arrow-up-right, size: 100pt)| _React.js, Tailwind CSS, Express, Prisma ORM, MongoDB_
+                *RIFF*#iconlink("https://riff.kottesh.xyz", label: none, icon: arrow-up-right, size: 0.9em)| _React.js, Tailwind CSS, Express, Prisma ORM, MongoDB_
             ],
             tr: iconlink("https://github.com/kottesh/riff", label: "kottesh/riff", icon: github),
         )[
             - A Music Streaming App that supports smooth audio streaming with features to browse, search, and play music.
             - Implemented a fully compatible player with the queuing functionality.
-            - Created a custom API backend #iconlink("https://github.com/kottesh/riff-api", label: none, icon: arrow-up-right, size: 100pt)~for serving the content to the site.
+            - Created a custom API backend #iconlink("https://github.com/kottesh/riff-api", label: none, icon: arrow-up-right, size: 0.9em)~for serving the content to the site.
             - Utilizes _Firebase_ bucket storage for audio files and _Cloudinary_ for image assets.
         ]
     }
@@ -91,7 +91,7 @@
 
     let r2up = {
         cventry(
-            tl: [ *R2UP* #iconlink("https://cup.kottesh.xyz", label: none, icon: arrow-up-right)~ | _Vue JS, Tailwind CSS, AWS SDK_ ],
+            tl: [ *R2UP* #iconlink("https://cup.kottesh.xyz", label: none, icon: arrow-up-right, size: 0.9em)~ | _Vue JS, Tailwind CSS, AWS SDK_ ],
             tr: iconlink("https://github.com/kottesh/r2up", label: "kottesh/r2up", icon: github),
         )[
             - An util to interact with the Cloudflare R2 Object Storage.
