@@ -18,7 +18,7 @@ jobs:
       - name: Compile Resume 
         run: |
           mkdir -p out
-          typst compile --font-path ./fonts main.typ out/resume.pdf
+          typst compile --font-path ./fonts ./src/main.typ ./out/resume.pdf
 
       - name: Upload to CF R2
         uses: ryand56/r2-upload-action@latest
