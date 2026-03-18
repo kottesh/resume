@@ -1,7 +1,20 @@
 #import "chicv.typ": *;
 
 #let resume = {
-    let months = ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
+    let months = (
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
+    )
     let translate-date(month, year) = [#months.at(month - 1), #year]
     let current = [Present]
 
@@ -27,7 +40,7 @@
 
     // Experience
     let experience = {
-        let kla-date = [#translate-date(05, 2025) -- #current]
+        let kla-date = [#translate-date(05, 2025) -- #translate-date(11, 2025)]
         cventry(
             tl: [ *KLA Coporation* ],
             tr: kla-date,
@@ -41,15 +54,51 @@
         ]
     }
 
+    let contributions = {
+        let melinia-date = [#translate-date(01, 2026) -- #translate-date(
+                02,
+                2026,
+            )]
+        cventry(
+            tl: [ *Melinia'26* ],
+            tr: melinia-date,
+            bl: [ _Technical Lead_ ],
+        )[
+            - Led a team of *6* to design and deliver the *end-to-end tech infrastructure* for *Melinia'26*, including full system architecture and deployment *from scratch*.
+            - Developed a *QR-based check-in system* enabling *instant team-wide entry*, significantly improving *on-ground operational efficiency*.
+            - Architected and developed the event website (*Userland + Outreach*), owning the complete *Outreach flow* for a seamless participant experience.
+            - Built and deployed *scalable backend systems* with *secure authentication*, *CI/CD pipelines*, and *mail servers (Mailcow)* on *Hetzner VPS*, handling *1000+ users* during the event.
+        ]
+    }
+
     // Projects
     let rez-mcp = {
         cventry(
             tl: [ *REZ* | _Python, gofastmcp, FastAPI, BeautifulSoup_],
-            tr: iconlink("https://github.com/kottesh/rez-mcp", label: "kottesh/rez-mcp", icon: github),
+            tr: iconlink(
+                "https://github.com/kottesh/rez-mcp",
+                label: "kottesh/rez-mcp",
+                icon: github,
+            ),
         )[
             - Developed an MCP Server for CIT Results Site that scraped institutional data using BeautifulSoup and exposed tools for viewing profiles, retrieving results, and downloading hall tickets and result PDFs
             - Implemented token-based authentication with HMAC signing to secure user login and ensure token authenticity within the system
             - Designed and built data retrieval and processing pipeline from web scraping to formatting responses in structured formats optimized for LLM integration
+        ]
+    }
+
+    let bitdb = {
+        cventry(
+            tl: [ *BITDB* | _Rust, crc32fast, clap_ (AI) ],
+            tr: iconlink(
+                "https://github.com/kottesh/bitdb",
+                label: "kottesh/bitdb",
+                icon: github,
+            ),
+        )[
+            - Built a Bitcask-inspired key-value storage engine in Rust — O(1) reads, crash recovery, compaction.
+            - Append-only log storage with CRC32 validation, hint files, and atomic compaction via strict TDD.
+            - Solved crash recovery edge cases, merge atomicity, and compact self-describing record format design.
         ]
     }
 
@@ -58,7 +107,11 @@
             tl: [
                 *RIFF*#iconlink("https://riff.kottesh.xyz", label: none, icon: arrow-up-right, size: 0.9em)| _React.js, Tailwind CSS, Express, Prisma ORM, MongoDB_
             ],
-            tr: iconlink("https://github.com/kottesh/riff", label: "kottesh/riff", icon: github),
+            tr: iconlink(
+                "https://github.com/kottesh/riff",
+                label: "kottesh/riff",
+                icon: github,
+            ),
         )[
             - A Music Streaming App that supports smooth audio streaming with features to browse, search, and play music.
             - Implemented a fully compatible player with the queuing functionality.
@@ -70,7 +123,11 @@
     let chips = {
         cventry(
             tl: [ *CHIPS* | _C++, SDL 2, CMake_ ],
-            tr: iconlink("https://github.com/kottesh/chips", label: "kottesh/chips", icon: github),
+            tr: iconlink(
+                "https://github.com/kottesh/chips",
+                label: "kottesh/chips",
+                icon: github,
+            ),
         )[
             - A CHIP-8 interpreter in C++ that is fully compliant with the original specification.
             - Supports all the quirks of the original CHIP-8 platform to enable running older ROMs.
@@ -81,7 +138,11 @@
     let rez = {
         cventry(
             tl: [ *REZ* #iconlink("https://rez.kotsh.tech", label: none, icon: arrow-up-right)~ | _Python, Flask, Marshmallow, JWT, Redis_],
-            tr: iconlink("https://github.com/kottesh/rez", label: "kottesh/rez", icon: github),
+            tr: iconlink(
+                "https://github.com/kottesh/rez",
+                label: "kottesh/rez",
+                icon: github,
+            ),
         )[
             - Developed a REST API wrapper for the CIT student portal.
             - Implemented secure authentication using JSON Web Tokens (JWT), replacing vulnerable cookie-based authentication.
@@ -92,7 +153,11 @@
     let r2up = {
         cventry(
             tl: [ *R2UP* #iconlink("https://cup.kottesh.xyz", label: none, icon: arrow-up-right, size: 0.9em)~ | _Vue JS, Tailwind CSS, AWS SDK_ ],
-            tr: iconlink("https://github.com/kottesh/r2up", label: "kottesh/r2up", icon: github),
+            tr: iconlink(
+                "https://github.com/kottesh/r2up",
+                label: "kottesh/r2up",
+                icon: github,
+            ),
         )[
             - An util to interact with the Cloudflare R2 Object Storage.
             - Implemented functions for uploading files, generating links, and deleting objects.
@@ -103,7 +168,11 @@
     let payit = {
         cventry(
             tl: [ *PAYIT* | _Java, Java Swing, OracleDB_ ],
-            tr: iconlink("https://github.com/kottesh/payit", label: "kottesh/payit", icon: github),
+            tr: iconlink(
+                "https://github.com/kottesh/payit",
+                label: "kottesh/payit",
+                icon: github,
+            ),
         )[
             - Developed a comprehensive payment system model simulation supporting UPI, NetBanking, and Credit/Debit transactions.
             - Utilizes Java Swing to create a seamless user interface, simulating real-world payment scenarios.
@@ -114,7 +183,11 @@
     let cosmox = {
         cventry(
             tl: [ *COSMOX* | _Javascript, Ajax, HTML, CSS_ ],
-            tr: iconlink("https://github.com/kottesh/cosmox", label: "kottesh/cosmox", icon: github),
+            tr: iconlink(
+                "https://github.com/kottesh/cosmox",
+                label: "kottesh/cosmox",
+                icon: github,
+            ),
         )[
             - Developed a web application that provides comprehensive information about space vehicle launches, stars, astronauts and planets.
             - Integrated NASA's Astronomy Picture of the Day (APOD) API to dynamically fetch and display daily space imagery and related data.
@@ -141,7 +214,9 @@
             [- *Programming Languages:* C/C++, Python, JavaScript]
         }
         let frameWorks = {
-            [- *Frameworks:* React JS, Vue JS, Tailwind CSS, Flask, FastAPI, Zola, OpenAI Agents SDK, Langchain]
+            [
+                - *Frameworks:* React JS, Vue JS, Tailwind CSS, Flask, FastAPI, Zola, OpenAI Agents SDK, Langchain
+            ]
         }
         let databases = {
             [- *Databases:* SQLite, MongoDB, Redis, Oracle DB, Chroma DB]
@@ -202,20 +277,17 @@
     [== Experience]
     experience
 
+    [== Contributions ]
+    contributions
+
     [== Projects]
     rez-mcp
-    r2up
+    bitdb
     chips
     riff
 
     [== Technical Skills]
     skills
-
-    [== Areas of Interest]
-    relevantCourseWork
-
-    [== Achievements ]
-    achievements
 
     [== Education]
     edu
