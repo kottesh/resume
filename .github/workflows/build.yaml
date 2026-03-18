@@ -1,4 +1,4 @@
-name: Build Resume 
+name: Build Resume
 
 on:
   push:
@@ -12,13 +12,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Typst
-        uses: typst-community/setup-typst@v4 
+      - name: Install Nix
+        uses: cachix/install-nix-action@v31
 
-      - name: Compile Resume 
-        run: |
-          mkdir -p out
-          typst compile --font-path ./fonts ./src/main.typ ./out/resume.pdf
+      - name: Build Resume
+        run: nix build .#resume
 
       - name: Upload to CF R2
         uses: ryand56/r2-upload-action@latest
@@ -27,5 +25,5 @@ jobs:
           r2-access-key-id: ${{ secrets.R2_ACCESS_KEY_ID }}
           r2-secret-access-key: ${{ secrets.R2_SECRET_ACCESS_KEY }}
           r2-bucket: ${{ secrets.R2_BUCKET }}
-          source-dir: out/
+          source-dir: result/
           destination-dir: f/

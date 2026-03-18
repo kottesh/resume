@@ -5,7 +5,10 @@
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
   };
 
-  outputs = { self, nixpkgs }:
+  outputs =
+    { self
+    , nixpkgs
+    }:
     let
       supportedSystems = [
         "x86_64-linux"
@@ -27,6 +30,32 @@
               typst
               typstyle
             ];
+          };
+        }
+      );
+
+      packages = forEachSystem (
+        system:
+        let
+          pkgs = nixpkgs.legacyPackages.${system};
+        in
+        {
+          resume = pkgs.stdenv.mkDerivation {
+            name = "resume";
+            nativeBuildInputs = [ pkgs.typst ];
+            src = ./.;
+
+            buildPhase = ''
+              typst compile \
+                --font-path ./fonts \
+                ./src/main.typ \
+                resume.pdf
+            '';
+
+            installPhase = ''
+              mkdir -p $out
+              cp resume.pdf $out
+            '';
           };
         }
       );
