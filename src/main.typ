@@ -20,13 +20,13 @@
 
     // Education
     let edu = {
-        let gpa = 9.26
+        let gpa = 9.36
         let cit-date = [#translate-date(10, 2022) -- #current]
         cventry(
             tl: [ *Coimbatore Institute of Technology*, Coimbatore, India ],
             tr: cit-date,
             bl: [ _Master of Science in Software Systems_ ],
-            br: [CGPA: *#gpa/10* ( upto 6th sem )],
+            br: [CGPA: *#gpa/10* ( upto 7th sem )],
         )[]
 
         let ssv-date = [#translate-date(6, 2020) -- #translate-date(5, 2022)]
