@@ -20,13 +20,13 @@
 
     // Education
     let edu = {
-        let gpa = 9.36
+        let cgpa = 9.28
         let cit-date = [#translate-date(10, 2022) -- #current]
         cventry(
             tl: [ *Coimbatore Institute of Technology*, Coimbatore, India ],
             tr: cit-date,
             bl: [ _Master of Science in Software Systems_ ],
-            br: [CGPA: *#gpa/10* ( upto 7th sem )],
+            br: [CGPA: *#cgpa/10* ( upto 8th sem )],
         )[]
 
         let ssv-date = [#translate-date(6, 2020) -- #translate-date(5, 2022)]
@@ -40,6 +40,16 @@
 
     // Experience
     let experience = {
+        let kla-summer-date = [#translate-date(06, 2026) -- #current ]
+        cventry(
+            tl: [ *KLA Coporation* ],
+            tr: kla-summer-date,
+            bl: [ _Software Engineer Intern_ ],
+            br: [ _Chennai, India_ ],
+        )[
+            - Built a *minimal visualization dashboard* with a custom *JSON-based DSL engine* for searching, filtering, aggregating, and visualizing data to support report generation.
+            - Developed an *automated daily analytics reporting service* on top of *Devin* with a custom *SKILL package*.
+        ]
         let kla-date = [#translate-date(05, 2025) -- #translate-date(11, 2025)]
         cventry(
             tl: [ *KLA Coporation* ],
@@ -284,7 +294,6 @@
     rez-mcp
     bitdb
     chips
-    riff
 
     [== Technical Skills]
     skills
