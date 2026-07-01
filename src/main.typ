@@ -47,8 +47,8 @@
             bl: [ _Software Engineer Intern_ ],
             br: [ _Chennai, India_ ],
         )[
-            - Built a *minimal visualization dashboard* with a custom *JSON-based DSL engine* for searching, filtering, aggregating, and visualizing data to support report generation.
-            - Developed an *automated daily analytics reporting service* on top of *Devin* with a custom *SKILL package*.
+            - Built a *minimal visualization dashboard* backed by a custom *JSON DSL query engine* that validates user-selected fields and compiles requests into *T-SQL*.
+            - Developed an *automated daily activity reporting service* on top of *Devin* with a custom *SKILL package*.
         ]
         let kla-date = [#translate-date(05, 2025) -- #translate-date(11, 2025)]
         cventry(
@@ -91,9 +91,9 @@
                 icon: github,
             ),
         )[
-            - Developed an MCP Server for CIT Results Site that scraped institutional data using BeautifulSoup and exposed tools for viewing profiles, retrieving results, and downloading hall tickets and result PDFs
-            - Implemented token-based authentication with HMAC signing to secure user login and ensure token authenticity within the system
-            - Designed and built data retrieval and processing pipeline from web scraping to formatting responses in structured formats optimized for LLM integration
+            - Built an MCP server for the CIT results portal, with tools for retrieving student profiles, results, hall tickets, and PDFs.
+            - Fetched portal pages with httpx and parsed HTML using BeautifulSoup to return structured data.
+            - Secured student sessions using HMAC-signed tokens for authenticated portal access.
         ]
     }
 
@@ -106,9 +106,9 @@
                 icon: github,
             ),
         )[
-            - Built a Bitcask-inspired key-value storage engine in Rust — O(1) reads, crash recovery, compaction.
-            - Append-only log storage with CRC32 validation, hint files, and atomic compaction via strict TDD.
-            - Solved crash recovery edge cases, merge atomicity, and compact self-describing record format design.
+            - Built a Bitcask-style KV store in Rust with append-only segments, KeyDir indexing, O(1) reads, and tombstone deletes.
+            - Designed CRC32-validated records and hint files for fast rebuilds with corrupted/truncated write handling.
+            - Implemented crash-safe compaction that rewrites live keys through a temporary file-set and removes stale records.
         ]
     }
 
@@ -221,7 +221,7 @@
             [- *Developer Tools:* #tools.join(", ")]
         }
         let progLang = {
-            [- *Programming Languages:* C/C++, Python, JavaScript]
+            [- *Programming Languages:* C/C++, Python, JavaScript, TypeScript]
         }
         let frameWorks = {
             [

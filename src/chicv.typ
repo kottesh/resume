@@ -75,8 +75,8 @@
         ),
     )
     set list(indent: 3pt)
-    set text(size: 9.5pt, font: the-font)
-    set page(margin: (x: 1cm, y: 0.6cm))
+    set text(size: 9.8pt, font: the-font)
+    set page(margin: (left: 1cm, right: 1cm, top: 1cm, bottom: 0.6cm))
     set par(justify: true, spacing: 1.1em)
 
     body
